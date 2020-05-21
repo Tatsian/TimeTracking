@@ -11,16 +11,16 @@ import Foundation
 import CoreData
 
 
-extension WorkTimeInfo {
+extension WorkTime {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WorkTimeInfo> {
-        return NSFetchRequest<WorkTimeInfo>(entityName: "WorkTime")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<WorkTime> {
+        return NSFetchRequest<WorkTime>(entityName: "WorkTime")
     }
 
     @NSManaged public var startDate: Date
     @NSManaged public var endDate: Date
     @NSManaged public var type: String
-    @NSManaged public var employee: EmployeesInfo?
-    @NSManaged public var daysType: TypeOfDaysInfo?
+    @NSManaged public var employee: Employees?
+    @NSManaged public var daysType: TypeOfDays?
 
 }

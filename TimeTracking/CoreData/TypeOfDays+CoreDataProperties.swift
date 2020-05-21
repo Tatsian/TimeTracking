@@ -11,14 +11,14 @@ import Foundation
 import CoreData
 
 
-extension TypeOfDaysInfo {
+extension TypeOfDays {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<TypeOfDaysInfo> {
-        return NSFetchRequest<TypeOfDaysInfo>(entityName: "TypeOfDays")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TypeOfDays> {
+        return NSFetchRequest<TypeOfDays>(entityName: "TypeOfDays")
     }
 
     @NSManaged public var type: String
     @NSManaged public var typeFullName: String
-    @NSManaged public var absence: WorkTimeInfo?
+    @NSManaged public var absence: WorkTime?
 
 }

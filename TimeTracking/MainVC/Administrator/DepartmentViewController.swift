@@ -13,7 +13,7 @@ class DepartmentViewController: UIViewController {
 
     @IBOutlet weak var departmentTable: UITableView!
     
-    var departmentArray = [DepartmentsInfo]()
+    var departmentArray = [Departments]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

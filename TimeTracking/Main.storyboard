@@ -42,7 +42,7 @@
                                         <state key="normal" title="Timekeeper"/>
                                         <connections>
                                             <action selector="timekeeperButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWX-x3-EMT"/>
-                                            <segue destination="dAf-83-pi4" kind="show" id="jPP-cT-AyD"/>
+                                            <segue destination="7LZ-rj-8lV" kind="show" id="Etm-Or-izW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HolidaysCell" id="FWT-tE-yun">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeCell" id="FWT-tE-yun">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FWT-tE-yun" id="Tnz-nr-Fhj">
@@ -125,12 +125,29 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addNewEmployeeButton" destination="1Sr-GP-VUj" id="2c3-MD-r63"/>
                         <outlet property="employeesTable" destination="so2-Zj-uIb" id="vsx-Jg-t6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dd-9g-03u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-31204" y="989"/>
+        </scene>
+        <!--Mark of working time-->
+        <scene sceneID="lUu-SV-4eO">
+            <objects>
+                <viewController storyboardIdentifier="TimeStampVC" id="pew-zJ-jsj" customClass="TimeStampViewController" customModule="TimeTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIX-cf-kc0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e9E-8n-BTX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mark of working time" id="boA-VW-sDU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gng-gr-86g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30284.057971014496" y="1708.9285714285713"/>
         </scene>
         <!--Add new employee-->
         <scene sceneID="ATw-bf-DOa">
@@ -374,70 +391,6 @@
             </objects>
             <point key="canvasLocation" x="-29556.521739130436" y="334.82142857142856"/>
         </scene>
-        <!--List of marks-->
-        <scene sceneID="nkE-Py-5SG">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6MA-5Q-liD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="PersonVC" id="dAf-83-pi4" customClass="ReportViewController" customModule="TimeTracking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DF8-GA-tro">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-6q-s8O">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonCell" id="uor-13-03u">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uor-13-03u" id="y6w-by-rHn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="vze-O6-wmG" kind="show" id="oKr-wa-uLn"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="dAf-83-pi4" id="8BL-BN-oNk"/>
-                                    <outlet property="delegate" destination="dAf-83-pi4" id="sAl-NC-lZG"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="7NH-n9-zeQ" firstAttribute="trailing" secondItem="DTt-6q-s8O" secondAttribute="trailing" id="0EF-3R-ggQ"/>
-                            <constraint firstItem="DTt-6q-s8O" firstAttribute="top" secondItem="7NH-n9-zeQ" secondAttribute="top" id="sBv-Pj-TJq"/>
-                            <constraint firstItem="7NH-n9-zeQ" firstAttribute="bottom" secondItem="DTt-6q-s8O" secondAttribute="bottom" id="wG3-Yh-n5h"/>
-                            <constraint firstItem="DTt-6q-s8O" firstAttribute="leading" secondItem="7NH-n9-zeQ" secondAttribute="leading" id="wuy-E4-FeD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="7NH-n9-zeQ"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="List of marks" id="C73-ul-g4D"/>
-                    <connections>
-                        <outlet property="personTable" destination="DTt-6q-s8O" id="yG9-Fb-ErQ"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-31204" y="1695"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cTb-X0-r9k">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="diu-TL-gKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="vze-O6-wmG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wnf-Bb-2Fi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="QgV-RB-vQX"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bYR-ys-3am"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-30325" y="1699"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="k3r-7h-xwB">
             <objects>
@@ -492,5 +445,26 @@
             </objects>
             <point key="canvasLocation" x="-30467" y="982"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qlh-1B-54t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uab-hx-oSd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4c0-SS-fIC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pew-zJ-jsj" kind="relationship" relationship="rootViewController" id="76g-nl-nEx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5K-HP-xQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31194.202898550728" y="1708.9285714285713"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Etm-Or-izW"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(WorkTime)
-public class WorkTimeInfo: NSManagedObject {
+public class WorkTime: NSManagedObject {
 
 }

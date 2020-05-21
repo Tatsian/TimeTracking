@@ -31,9 +31,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hrButtonTapped(_ sender: UIButton) {
+        EmployeesViewController.isHRManager = true
     }
     
     @IBAction func timekeeperButtonTapped(_ sender: UIButton) {
+        EmployeesViewController.isHRManager = false
     }
 }
 

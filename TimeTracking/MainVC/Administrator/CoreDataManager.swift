@@ -18,8 +18,8 @@ class CoreDataManager {
         return context
     }()
     
-    func getDepartmentsList() -> [DepartmentsInfo] {
-        let fetchRequest = DepartmentsInfo.fetchRequest() as NSFetchRequest<DepartmentsInfo>
+    func getDepartmentsList() -> [Departments] {
+        let fetchRequest = Departments.fetchRequest() as NSFetchRequest<Departments>
         let sort = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
@@ -31,8 +31,8 @@ class CoreDataManager {
         }
     }
     
-    func getEmployeesList() -> [EmployeesInfo] {
-        let fetchRequest = EmployeesInfo.fetchRequest() as NSFetchRequest<EmployeesInfo>
+    func getEmployeesList() -> [Employees] {
+        let fetchRequest = Employees.fetchRequest() as NSFetchRequest<Employees>
         let sort = NSSortDescriptor(key: "lastName", ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
@@ -44,9 +44,25 @@ class CoreDataManager {
         }
     }
     
-    func save(department: String, oldValue: DepartmentsInfo? = nil ) {
-        let newDepartment = oldValue ?? DepartmentsInfo(context: context)
-        newDepartment.name = department
+//    func save(department: String, oldValue: Departments? = nil ) {
+//        let newDepartment = oldValue ?? Departments(context: context)
+//        newDepartment.name = department
+//        do {
+//            try context.save()
+//        } catch let error {
+//            print("Could not save because of error: \(error)")
+//        }
+//    }
+    
+    func newEmployee() -> Employees {
+        return Employees(context: context)
+    }
+    func newDepartment() -> Departments {
+        return Departments(context: context)
+    }
+    
+    func save() {
+
         do {
             try context.save()
         } catch let error {
@@ -54,22 +70,7 @@ class CoreDataManager {
         }
     }
     
-    func save(employee: Employee, oldValue: EmployeesInfo? = nil ) {
-        let newEmployee = oldValue ?? EmployeesInfo(context: context)
-        
-        newEmployee.firstName = employee.firstName
-        newEmployee.lastName = employee.lastName
-        newEmployee.position = employee.position
-        newEmployee.salary = employee.salary
-        
-        do {
-            try context.save()
-        } catch let error {
-            print("Could not save because of error: \(error)")
-        }
-    }
-    
-    func delete(department: DepartmentsInfo) {
+    func delete(department: Departments) {
         context.delete(department)
         do {
             try context.save()
@@ -78,7 +79,7 @@ class CoreDataManager {
         }
     }
     
-    func delete(employee: EmployeesInfo) {
+    func delete(employee: Employees) {
         context.delete(employee)
         do {
             try context.save()

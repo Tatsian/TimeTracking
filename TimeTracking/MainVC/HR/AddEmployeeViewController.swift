@@ -17,7 +17,7 @@ class AddEmployeeViewController: UIViewController {
     @IBOutlet weak var departmentPicker: UIPickerView!
     
     
-    var employee: EmployeesInfo?
+    var employee: Employees?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,6 @@ class AddEmployeeViewController: UIViewController {
         }
     }
     
-    
-
     @objc func cancelTapped() {
         dismiss(animated: true, completion: nil)
     }
@@ -57,11 +55,14 @@ class AddEmployeeViewController: UIViewController {
         if name.isEmpty || lastName.isEmpty || position.isEmpty {
             UIAlertController.showAlert(message: "Missing required field(s)", from: self)
         } else {
-            let newEmployee = Employee(firstName: name,
-                                       lastName: lastName,
-                                       position: position,
-                                       salary: salary)
-            CoreDataManager.shared.save(employee: newEmployee, oldValue: employee)
+            if employee == nil {
+                employee = CoreDataManager.shared.newEmployee()
+            }
+            employee?.firstName = name.capitalized
+            employee?.lastName = lastName.capitalized
+            employee?.position = position
+            employee?.salary = NSDecimalNumber(decimal: salary)
+            CoreDataManager.shared.save()
             dismiss(animated: true, completion: nil)
         }
     }
@@ -77,10 +78,8 @@ extension AddEmployeeViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         return departments.count
     }
     
-
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let departments = CoreDataManager.shared.getDepartmentsList()[row]
         return departments.name
     }
-    
 }

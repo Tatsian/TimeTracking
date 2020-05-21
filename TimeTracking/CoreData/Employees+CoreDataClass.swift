@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(Employees)
-public class EmployeesInfo: NSManagedObject {
+public class Employees: NSManagedObject {
 
 }

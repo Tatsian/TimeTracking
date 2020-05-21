@@ -13,7 +13,7 @@ class AddDepartmentViewController: UIViewController {
 
     @IBOutlet weak var departmentNameTextField: UITextField!
    
-    var department: DepartmentsInfo?
+    var department: Departments?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,12 @@ class AddDepartmentViewController: UIViewController {
         } else if checkingTheSame(name: name) {
             UIAlertController.showAlert(message: "A department with that name already exists", from: self)
         } else {
-            CoreDataManager.shared.save(department: name.capitalized, oldValue: department)
+            
+            if department == nil {
+                department = CoreDataManager.shared.newDepartment()
+            }
+            department?.name = name.capitalized
+            CoreDataManager.shared.save()
             dismiss(animated: true, completion: nil)
         }
     }

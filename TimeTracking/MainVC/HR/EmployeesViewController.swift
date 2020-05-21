@@ -10,18 +10,20 @@ import UIKit
 
 class EmployeesViewController: UIViewController {
     
-      @IBOutlet weak var employeesTable: UITableView!
-          
-          var employeesArray = [EmployeesInfo]()
-          
-          override func viewDidLoad() {
-              super.viewDidLoad()
-
-              // Do any additional setup after loading the view.
-          }
-
+    @IBOutlet weak var employeesTable: UITableView!
+    @IBOutlet weak var addNewEmployeeButton: UIBarButtonItem!
+    
+    static var isHRManager = true
+    
+    var employeesArray = [Employees]()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if !EmployeesViewController.isHRManager {
+            addNewEmployeeButton.isEnabled = false
+        }
+        
         employeesArray = CoreDataManager.shared.getEmployeesList()
         employeesTable.reloadData()
     }
@@ -32,6 +34,11 @@ class EmployeesViewController: UIViewController {
             as? AddEmployeeViewController
     }
     
+    static func storyboardInstanceTime() -> TimeStampViewController? {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "TimeStampVC") as? TimeStampViewController
+    }
+    
       }
 
       extension EmployeesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,7 +47,7 @@ class EmployeesViewController: UIViewController {
           }
           
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = employeesTable.dequeueReusableCell(withIdentifier: "HolidaysCell", for: indexPath)
+            let cell = employeesTable.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath)
             let persons = employeesArray[indexPath.row]
             let name = persons.firstName 
             let lastName = persons.lastName
@@ -50,13 +57,24 @@ class EmployeesViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
-            guard let testVC = EmployeesViewController.storyboardInstance() else {
-                return
+            
+            if EmployeesViewController.isHRManager {
+                
+                guard let openedVC = EmployeesViewController.storyboardInstance() else {
+                    return
+                }
+                openedVC.employee = employeesArray[indexPath.row]
+                let navigationController = UINavigationController(rootViewController: openedVC)
+                navigationController.modalPresentationStyle = .fullScreen
+                self.present(navigationController, animated: true, completion: nil)
+            } else {
+                guard let openedVC = EmployeesViewController.storyboardInstanceTime() else {
+                    return
+                }
+                let navigationController = UINavigationController(rootViewController: openedVC)
+                navigationController.modalPresentationStyle = .fullScreen
+                self.present(navigationController, animated: true, completion: nil)
             }
-            testVC.employee = employeesArray[indexPath.row]
-            let navigationController = UINavigationController(rootViewController: testVC)
-            navigationController.modalPresentationStyle = .fullScreen
-            self.present(navigationController, animated: true, completion: nil)
         }
         
         func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

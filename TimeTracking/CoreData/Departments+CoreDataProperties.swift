@@ -11,10 +11,10 @@ import Foundation
 import CoreData
 
 
-extension DepartmentsInfo {
+extension Departments {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<DepartmentsInfo> {
-        return NSFetchRequest<DepartmentsInfo>(entityName: "Departments")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Departments> {
+        return NSFetchRequest<Departments>(entityName: "Departments")
     }
 
     @NSManaged public var name: String
@@ -23,13 +23,13 @@ extension DepartmentsInfo {
 }
 
 // MARK: Generated accessors for employees
-extension DepartmentsInfo {
+extension Departments {
 
     @objc(addEmployeesObject:)
-    @NSManaged public func addToEmployees(_ value: EmployeesInfo)
+    @NSManaged public func addToEmployees(_ value: Employees)
 
     @objc(removeEmployeesObject:)
-    @NSManaged public func removeFromEmployees(_ value: EmployeesInfo)
+    @NSManaged public func removeFromEmployees(_ value: Employees)
 
     @objc(addEmployees:)
     @NSManaged public func addToEmployees(_ values: NSSet)

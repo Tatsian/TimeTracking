@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(Departments)
-public class DepartmentsInfo: NSManagedObject {
+public class Departments: NSManagedObject {
 
 }

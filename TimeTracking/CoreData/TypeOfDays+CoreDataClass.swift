@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(TypeOfDays)
-public class TypeOfDaysInfo: NSManagedObject {
+public class TypeOfDays: NSManagedObject {
 
 }

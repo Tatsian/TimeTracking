@@ -9,9 +9,9 @@
 import Foundation
 
 
-struct Employee {
+struct EmployeeStruct {
     var firstName: String
     var lastName: String
     var position: String
-    var salary: Decimal
+    var salary: NSDecimalNumber
 }

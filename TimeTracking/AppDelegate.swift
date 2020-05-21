@@ -33,20 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        managedObject.position = "iOS developer"
 //        managedObject.salary = 100
 //
-        guard let entityDescription = NSEntityDescription.entity(forEntityName: "DepartmentsInfo", in: context) else {
-             return true
-         }
-         let managedObject = DepartmentsInfo(entity: entityDescription, insertInto: context)
+//        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Departments", in: context) else {
+//             return true
+//         }
+//         let managedObject = Departments(entity: entityDescription, insertInto: context)
+//
+//         managedObject.name = "Developer"
+//
+//
+//         self.saveContext()
 
-         managedObject.name = "Developer"
-
-
-         self.saveContext()
-
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DepartmentsInfo")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Departments")
         do {
             let results = try context.fetch(fetchRequest)
-            for result in results as! [DepartmentsInfo] {
+            for result in results as! [Departments] {
 
 //                                if result.firstName == nil {
 //                                    context.delete(result)

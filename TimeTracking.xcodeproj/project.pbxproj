@@ -28,6 +28,7 @@
 		5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */; };
 		5B7AFBBA2475A94E00DA1D34 /* AddDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */; };
 		5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */; };
+		5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */; };
 		5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD1B772476CA5400AEBB45 /* Struct.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 		5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepartmentViewController.swift; sourceTree = "<group>"; };
 		5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStampViewController.swift; sourceTree = "<group>"; };
 		5BDD1B772476CA5400AEBB45 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		5B7AFB98247405F700DA1D34 /* Timekeeper */ = {
 			isa = PBXGroup;
 			children = (
+				5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */,
 			);
 			path = Timekeeper;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */,
 				5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */,
 				5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */,
+				5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */,
 				5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */,
 				5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */,
 				5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */,
