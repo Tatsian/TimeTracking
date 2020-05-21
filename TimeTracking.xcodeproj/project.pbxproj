@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */; };
+		5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */; };
+		5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB83247405A600DA1D34 /* ViewController.swift */; };
+		5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB88247405A600DA1D34 /* TimeTracking.xcdatamodeld */; };
+		5B7AFB8C247405AD00DA1D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */; };
+		5B7AFB8F247405AD00DA1D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AFB8D247405AD00DA1D34 /* LaunchScreen.storyboard */; };
+		5B7AFB9B2474065400DA1D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AFB9A2474065400DA1D34 /* Main.storyboard */; };
+		5B7AFB9D2474085E00DA1D34 /* DepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB9C2474085E00DA1D34 /* DepartmentViewController.swift */; };
+		5B7AFBA82474972000DA1D34 /* TypeOfDays+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA02474972000DA1D34 /* TypeOfDays+CoreDataClass.swift */; };
+		5B7AFBA92474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA12474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift */; };
+		5B7AFBAA2474972000DA1D34 /* Employees+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA22474972000DA1D34 /* Employees+CoreDataClass.swift */; };
+		5B7AFBAB2474972000DA1D34 /* Employees+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA32474972000DA1D34 /* Employees+CoreDataProperties.swift */; };
+		5B7AFBAC2474972000DA1D34 /* WorkTime+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA42474972000DA1D34 /* WorkTime+CoreDataClass.swift */; };
+		5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA52474972000DA1D34 /* WorkTime+CoreDataProperties.swift */; };
+		5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA62474972000DA1D34 /* Departments+CoreDataClass.swift */; };
+		5B7AFBAF2474972000DA1D34 /* Departments+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBA72474972000DA1D34 /* Departments+CoreDataProperties.swift */; };
+		5B7AFBB124749C3300DA1D34 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */; };
+		5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB524758F6A00DA1D34 /* EmployeesViewController.swift */; };
+		5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */; };
+		5B7AFBBA2475A94E00DA1D34 /* AddDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */; };
+		5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */; };
+		5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD1B772476CA5400AEBB45 /* Struct.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B7AFB7C247405A600DA1D34 /* TimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5B7AFB83247405A600DA1D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B7AFB89247405A600DA1D34 /* TimeTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeTracking.xcdatamodel; sourceTree = "<group>"; };
+		5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B7AFB8E247405AD00DA1D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B7AFB90247405AD00DA1D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7AFB9A2474065400DA1D34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5B7AFB9C2474085E00DA1D34 /* DepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentViewController.swift; sourceTree = "<group>"; };
+		5B7AFBA02474972000DA1D34 /* TypeOfDays+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeOfDays+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B7AFBA12474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TypeOfDays+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B7AFBA22474972000DA1D34 /* Employees+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employees+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B7AFBA32474972000DA1D34 /* Employees+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employees+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B7AFBA42474972000DA1D34 /* WorkTime+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkTime+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B7AFBA52474972000DA1D34 /* WorkTime+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkTime+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B7AFBA62474972000DA1D34 /* Departments+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Departments+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5B7AFBA72474972000DA1D34 /* Departments+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Departments+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = MainVC/Administrator/CoreDataManager.swift; sourceTree = "<group>"; };
+		5B7AFBB524758F6A00DA1D34 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepartmentViewController.swift; sourceTree = "<group>"; };
+		5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		5BDD1B772476CA5400AEBB45 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B7AFB79247405A600DA1D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B1FF67C2476B5AC003CA16D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFBA02474972000DA1D34 /* TypeOfDays+CoreDataClass.swift */,
+				5B7AFBA12474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift */,
+				5B7AFBA22474972000DA1D34 /* Employees+CoreDataClass.swift */,
+				5B7AFBA32474972000DA1D34 /* Employees+CoreDataProperties.swift */,
+				5B7AFBA42474972000DA1D34 /* WorkTime+CoreDataClass.swift */,
+				5B7AFBA52474972000DA1D34 /* WorkTime+CoreDataProperties.swift */,
+				5B7AFBA62474972000DA1D34 /* Departments+CoreDataClass.swift */,
+				5B7AFBA72474972000DA1D34 /* Departments+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5B7AFB73247405A600DA1D34 = {
+			isa = PBXGroup;
+			children = (
+				5B7AFB7E247405A600DA1D34 /* TimeTracking */,
+				5B7AFB7D247405A600DA1D34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B7AFB7D247405A600DA1D34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFB7C247405A600DA1D34 /* TimeTracking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B7AFB7E247405A600DA1D34 /* TimeTracking */ = {
+			isa = PBXGroup;
+			children = (
+				5B1FF67C2476B5AC003CA16D /* CoreData */,
+				5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */,
+				5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */,
+				5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */,
+				5BDD1B772476CA5400AEBB45 /* Struct.swift */,
+				5B7AFBB224756A5800DA1D34 /* Extensions */,
+				5B7AFB992474061900DA1D34 /* MainVC */,
+				5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */,
+				5B7AFB9A2474065400DA1D34 /* Main.storyboard */,
+				5B7AFB8D247405AD00DA1D34 /* LaunchScreen.storyboard */,
+				5B7AFB90247405AD00DA1D34 /* Info.plist */,
+				5B7AFB88247405A600DA1D34 /* TimeTracking.xcdatamodeld */,
+			);
+			path = TimeTracking;
+			sourceTree = "<group>";
+		};
+		5B7AFB96247405D500DA1D34 /* Administrator */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFB9C2474085E00DA1D34 /* DepartmentViewController.swift */,
+				5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */,
+			);
+			path = Administrator;
+			sourceTree = "<group>";
+		};
+		5B7AFB97247405ED00DA1D34 /* HR */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFBB524758F6A00DA1D34 /* EmployeesViewController.swift */,
+				5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */,
+			);
+			path = HR;
+			sourceTree = "<group>";
+		};
+		5B7AFB98247405F700DA1D34 /* Timekeeper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Timekeeper;
+			sourceTree = "<group>";
+		};
+		5B7AFB992474061900DA1D34 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFB83247405A600DA1D34 /* ViewController.swift */,
+				5B7AFB96247405D500DA1D34 /* Administrator */,
+				5B7AFB97247405ED00DA1D34 /* HR */,
+				5B7AFB98247405F700DA1D34 /* Timekeeper */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		5B7AFBB224756A5800DA1D34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B7AFB7B247405A600DA1D34 /* TimeTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B7AFB93247405AD00DA1D34 /* Build configuration list for PBXNativeTarget "TimeTracking" */;
+			buildPhases = (
+				5B7AFB78247405A600DA1D34 /* Sources */,
+				5B7AFB79247405A600DA1D34 /* Frameworks */,
+				5B7AFB7A247405A600DA1D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTracking;
+			productName = TimeTracking;
+			productReference = 5B7AFB7C247405A600DA1D34 /* TimeTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B7AFB74247405A600DA1D34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Tatsiana;
+				TargetAttributes = {
+					5B7AFB7B247405A600DA1D34 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 5B7AFB77247405A600DA1D34 /* Build configuration list for PBXProject "TimeTracking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B7AFB73247405A600DA1D34;
+			productRefGroup = 5B7AFB7D247405A600DA1D34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B7AFB7B247405A600DA1D34 /* TimeTracking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B7AFB7A247405A600DA1D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7AFB9B2474065400DA1D34 /* Main.storyboard in Resources */,
+				5B7AFB8F247405AD00DA1D34 /* LaunchScreen.storyboard in Resources */,
+				5B7AFB8C247405AD00DA1D34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B7AFB78247405A600DA1D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7AFBA92474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift in Sources */,
+				5B7AFBA82474972000DA1D34 /* TypeOfDays+CoreDataClass.swift in Sources */,
+				5B7AFBB124749C3300DA1D34 /* CoreDataManager.swift in Sources */,
+				5B7AFBAF2474972000DA1D34 /* Departments+CoreDataProperties.swift in Sources */,
+				5B7AFBAB2474972000DA1D34 /* Employees+CoreDataProperties.swift in Sources */,
+				5B7AFBAC2474972000DA1D34 /* WorkTime+CoreDataClass.swift in Sources */,
+				5B7AFBBA2475A94E00DA1D34 /* AddDepartmentViewController.swift in Sources */,
+				5B7AFBAA2474972000DA1D34 /* Employees+CoreDataClass.swift in Sources */,
+				5B7AFB9D2474085E00DA1D34 /* DepartmentViewController.swift in Sources */,
+				5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */,
+				5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */,
+				5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */,
+				5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */,
+				5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */,
+				5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */,
+				5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */,
+				5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */,
+				5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */,
+				5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5B7AFB8D247405AD00DA1D34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B7AFB8E247405AD00DA1D34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B7AFB91247405AD00DA1D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B7AFB92247405AD00DA1D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B7AFB94247405AD00DA1D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVWAR2B4J4;
+				INFOPLIST_FILE = TimeTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lessonOne.TimeTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B7AFB95247405AD00DA1D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVWAR2B4J4;
+				INFOPLIST_FILE = TimeTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lessonOne.TimeTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B7AFB77247405A600DA1D34 /* Build configuration list for PBXProject "TimeTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7AFB91247405AD00DA1D34 /* Debug */,
+				5B7AFB92247405AD00DA1D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B7AFB93247405AD00DA1D34 /* Build configuration list for PBXNativeTarget "TimeTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B7AFB94247405AD00DA1D34 /* Debug */,
+				5B7AFB95247405AD00DA1D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B7AFB88247405A600DA1D34 /* TimeTracking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B7AFB89247405A600DA1D34 /* TimeTracking.xcdatamodel */,
+			);
+			currentVersion = 5B7AFB89247405A600DA1D34 /* TimeTracking.xcdatamodel */;
+			path = TimeTracking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5B7AFB74247405A600DA1D34 /* Project object */;
+}

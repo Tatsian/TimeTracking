@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DepartmentsInfo" representedClassName="DepartmentsInfo" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EmployeesInfo" inverseName="department" inverseEntity="EmployeesInfo"/>
+    </entity>
+    <entity name="EmployeesInfo" representedClassName="EmployeesInfo" syncable="YES">
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="position" attributeType="String"/>
+        <attribute name="salary" attributeType="Decimal" defaultValueString="0"/>
+        <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentsInfo" inverseName="employees" inverseEntity="DepartmentsInfo"/>
+        <relationship name="workTime" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkTimeInfo" inverseName="employee" inverseEntity="WorkTimeInfo"/>
+    </entity>
+    <entity name="TypeOfDaysInfo" representedClassName="TypeOfDaysInfo" syncable="YES">
+        <attribute name="type" attributeType="String"/>
+        <attribute name="typeFullName" attributeType="String"/>
+        <relationship name="absence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkTimeInfo" inverseName="daysType" inverseEntity="WorkTimeInfo"/>
+    </entity>
+    <entity name="WorkTimeInfo" representedClassName="WorkTimeInfo" syncable="YES">
+        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="daysType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeOfDaysInfo" inverseName="absence" inverseEntity="TypeOfDaysInfo"/>
+        <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeesInfo" inverseName="workTime" inverseEntity="EmployeesInfo"/>
+    </entity>
+    <elements>
+        <element name="DepartmentsInfo" positionX="-293.39453125" positionY="-25.41015625" width="128" height="73"/>
+        <element name="EmployeesInfo" positionX="-123.11328125" positionY="10.28125" width="128" height="133"/>
+        <element name="TypeOfDaysInfo" positionX="105.85546875" positionY="243.90625" width="128" height="88"/>
+        <element name="WorkTimeInfo" positionX="118.82421875" positionY="10.34765625" width="128" height="118"/>
+    </elements>
+</model>
