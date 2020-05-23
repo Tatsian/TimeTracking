@@ -16,6 +16,7 @@ class AddEmployeeViewController: UIViewController {
     @IBOutlet weak var salaryTextField: UITextField!
     @IBOutlet weak var departmentPicker: UIPickerView!
     
+    let departmentsArray = CoreDataManager.shared.getDepartmentsList()
     
     var employee: Employees?
     
@@ -34,6 +35,8 @@ class AddEmployeeViewController: UIViewController {
             lastNameTextField.text = openedEmployee.lastName
             positionTextField.text = openedEmployee.position
             salaryTextField.text = "\(openedEmployee.salary)"
+            
+            setPickerDefaultValue(item: openedEmployee.department)
             navigationItem.title = "Employee detail"
         }
     }
@@ -46,13 +49,22 @@ class AddEmployeeViewController: UIViewController {
         let name = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
         let position = positionTextField.text ?? ""
+        let departmentIndex = departmentPicker.selectedRow(inComponent: 0)
+        let department = departmentsArray[departmentIndex]
         
         guard let salary = Decimal(string: salaryTextField.text ?? "") else {
-            UIAlertController.showAlert(message: "hui", from: self)
+            UIAlertController.showAlert(message: "You can use 0-9 to set the salary value", from: self)
+            setRedPlaceholder(for: firstNameTextField)
+            setRedPlaceholder(for: lastNameTextField)
+            setRedPlaceholder(for: positionTextField)
+            setRedPlaceholder(for: salaryTextField)
             return
         }
         
         if name.isEmpty || lastName.isEmpty || position.isEmpty {
+            setRedPlaceholder(for: firstNameTextField)
+            setRedPlaceholder(for: lastNameTextField)
+            setRedPlaceholder(for: positionTextField)
             UIAlertController.showAlert(message: "Missing required field(s)", from: self)
         } else {
             if employee == nil {
@@ -62,8 +74,19 @@ class AddEmployeeViewController: UIViewController {
             employee?.lastName = lastName.capitalized
             employee?.position = position
             employee?.salary = NSDecimalNumber(decimal: salary)
+            employee?.department = department
+  
             CoreDataManager.shared.save()
             dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func setPickerDefaultValue(item: Departments?) {
+        guard let item = item else {
+            return
+        }
+        if let indexPosition = departmentsArray.firstIndex(of: item) {
+            departmentPicker.selectRow(indexPosition, inComponent: 0, animated: true)
         }
     }
 }
@@ -74,12 +97,11 @@ extension AddEmployeeViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        let departments = CoreDataManager.shared.getDepartmentsList()
-        return departments.count
+        return departmentsArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let departments = CoreDataManager.shared.getDepartmentsList()[row]
-        return departments.name
+        let department = departmentsArray[row]
+        return department.name
     }
 }

@@ -44,6 +44,16 @@ class CoreDataManager {
         }
     }
     
+    func getTypeOfDays() -> [TypeOfDays] {
+        let fetchRequest = TypeOfDays.fetchRequest() as NSFetchRequest<TypeOfDays>
+        do {
+           return try context.fetch(fetchRequest)
+        } catch let error {
+            print("Could not fetch because of error: \(error)")
+            return []
+        }
+    }
+    
 //    func save(department: String, oldValue: Departments? = nil ) {
 //        let newDepartment = oldValue ?? Departments(context: context)
 //        newDepartment.name = department

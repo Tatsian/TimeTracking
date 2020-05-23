@@ -38,6 +38,7 @@ class AddDepartmentViewController: UIViewController {
     @objc func saveTapped() {
         let name = departmentNameTextField.text ?? ""
         if name.isEmpty {
+            setRedPlaceholder(for: departmentNameTextField)
             UIAlertController.showAlert(message: "Missing required field", from: self)
         } else if checkingTheSame(name: name) {
             UIAlertController.showAlert(message: "A department with that name already exists", from: self)

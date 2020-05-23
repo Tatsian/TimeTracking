@@ -16,32 +16,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let appDel = UIApplication.shared.delegate as! AppDelegate
         let context = appDel.persistentContainer.viewContext
-
-//        guard let entityDescription = NSEntityDescription.entity(forEntityName: "EmployeesInfo", in: context) else {
-//             return true
-//         }
-//         let managedObject = Employees(entity: entityDescription, insertInto: context)
 //
+
+        
+        if CoreDataManager.shared.getEmployeesList().count == 0 {
+            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Employees", in: context) else {
+                return true
+            }
+            let managedObject = Employees(entity: entityDescription, insertInto: context)
+            managedObject.firstName = "Tatsiana"
+            managedObject.lastName = "Pasiukova"
+            managedObject.position = "iOS developer"
+            managedObject.salary = 100
+        }
+        
+        if CoreDataManager.shared.getDepartmentsList().count == 0 {
+            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Departments", in: context) else {
+                return true
+            }
+            let managedObject = Departments(entity: entityDescription, insertInto: context)
+            
+            managedObject.name = "Developer"
+        }
+        
+        if CoreDataManager.shared.getTypeOfDays().count == 0 {
+            guard let entityDescription = NSEntityDescription.entity(forEntityName: "TypeOfDays", in: context) else {
+                return true
+            }
+            let managedObject = TypeOfDays(entity: entityDescription, insertInto: context)
+            managedObject.type = "Б"
+            managedObject.typeFullName = "Дни временной нетрудоспособности"
+        }
+
 //        managedObject.firstName = "Sergey"
 //        managedObject.lastName = "Petrov"
 //        managedObject.position = "Python and Go developer"
 //        managedObject.salary = 100.00
 //        managedObject.department?.name = "Developer"
 
-//        managedObject.firstName = "Tatsiana"
-//        managedObject.lastName = "Pasiukova"
-//        managedObject.position = "iOS developer"
-//        managedObject.salary = 100
-//
-//        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Departments", in: context) else {
-//             return true
-//         }
-//         let managedObject = Departments(entity: entityDescription, insertInto: context)
-//
-//         managedObject.name = "Developer"
-//
-//
-//         self.saveContext()
+         self.saveContext()
 
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Departments")
         do {
@@ -54,8 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                                }
 
                 print("type - \(result.name)")
-                //                print("full - \(result.typeFullName ?? "")")
-
             }
         } catch {
             print(error)

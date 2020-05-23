@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB22479CA4400CEA882 /* VC.swift */; };
+		5B2F0DB52479D39700CEA882 /* CoreDataDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */; };
 		5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */; };
 		5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */; };
 		5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB83247405A600DA1D34 /* ViewController.swift */; };
@@ -30,9 +32,14 @@
 		5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */; };
 		5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */; };
 		5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD1B772476CA5400AEBB45 /* Struct.swift */; };
+		C4BAF402E2440833EB68BBFA /* Pods_TimeTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDCDE7601ECF926D34A6D35 /* Pods_TimeTracking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07EAF741A6D355CB1E092290 /* Pods-TimeTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracking.release.xcconfig"; path = "Target Support Files/Pods-TimeTracking/Pods-TimeTracking.release.xcconfig"; sourceTree = "<group>"; };
+		0CCBC36871C9E9954F17A60E /* Pods-TimeTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracking.debug.xcconfig"; path = "Target Support Files/Pods-TimeTracking/Pods-TimeTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2F0DB22479CA4400CEA882 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDefaultValue.swift; sourceTree = "<group>"; };
 		5B7AFB7C247405A600DA1D34 /* TimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStampViewController.swift; sourceTree = "<group>"; };
 		5BDD1B772476CA5400AEBB45 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		FCDCDE7601ECF926D34A6D35 /* Pods_TimeTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +73,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BAF402E2440833EB68BBFA /* Pods_TimeTracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F9591BBFF05EA479E63AF6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CCBC36871C9E9954F17A60E /* Pods-TimeTracking.debug.xcconfig */,
+				07EAF741A6D355CB1E092290 /* Pods-TimeTracking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5B1FF67C2476B5AC003CA16D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +109,8 @@
 			children = (
 				5B7AFB7E247405A600DA1D34 /* TimeTracking */,
 				5B7AFB7D247405A600DA1D34 /* Products */,
+				1F9591BBFF05EA479E63AF6B /* Pods */,
+				69FCC953460262960BD05DC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +130,7 @@
 				5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */,
 				5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */,
 				5BDD1B772476CA5400AEBB45 /* Struct.swift */,
+				5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */,
 				5B7AFBB224756A5800DA1D34 /* Extensions */,
 				5B7AFB992474061900DA1D34 /* MainVC */,
 				5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */,
@@ -162,8 +183,17 @@
 			isa = PBXGroup;
 			children = (
 				5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */,
+				5B2F0DB22479CA4400CEA882 /* VC.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		69FCC953460262960BD05DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCDCDE7601ECF926D34A6D35 /* Pods_TimeTracking.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B7AFB93247405AD00DA1D34 /* Build configuration list for PBXNativeTarget "TimeTracking" */;
 			buildPhases = (
+				FB098C4662E923DD4988179F /* [CP] Check Pods Manifest.lock */,
 				5B7AFB78247405A600DA1D34 /* Sources */,
 				5B7AFB79247405A600DA1D34 /* Frameworks */,
 				5B7AFB7A247405A600DA1D34 /* Resources */,
+				CD5380187067B5045E6E1DF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +264,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD5380187067B5045E6E1DF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeTracking/Pods-TimeTracking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeTracking/Pods-TimeTracking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeTracking/Pods-TimeTracking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB098C4662E923DD4988179F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeTracking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B7AFB78247405A600DA1D34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -253,10 +327,12 @@
 				5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */,
 				5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */,
 				5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */,
+				5B2F0DB52479D39700CEA882 /* CoreDataDefaultValue.swift in Sources */,
 				5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */,
 				5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */,
 				5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */,
 				5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */,
+				5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +466,7 @@
 		};
 		5B7AFB94247405AD00DA1D34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCBC36871C9E9954F17A60E /* Pods-TimeTracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +485,7 @@
 		};
 		5B7AFB95247405AD00DA1D34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07EAF741A6D355CB1E092290 /* Pods-TimeTracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
