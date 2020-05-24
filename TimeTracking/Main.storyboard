@@ -136,7 +136,7 @@
         <!--Data Source-->
         <scene sceneID="lUu-SV-4eO">
             <objects>
-                <viewController storyboardIdentifier="TimeStampVC" id="pew-zJ-jsj" customClass="TimeStampViewController" customModule="TimeTracking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeStampVC" id="pew-zJ-jsj" customClass="CalendarViewController" customModule="TimeTracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eIX-cf-kc0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +182,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gng-gr-86g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-30284.057971014496" y="1708.9285714285713"/>
+        </scene>
+        <!--Pop Over Time Stamp View Controller-->
+        <scene sceneID="ozy-yO-qoJ">
+            <objects>
+                <viewController storyboardIdentifier="PopupVC" id="f0b-99-mnk" customClass="PopOverTimeStampViewController" customModule="TimeTracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2L-eL-jt2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKJ-Nk-a4G">
+                                <rect key="frame" x="20" y="156" width="374" height="524"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-DW-qrd">
+                                        <rect key="frame" x="10" y="486" width="177" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VvB-sX-V2O"/>
+                                        </constraints>
+                                        <state key="normal" title="Ok"/>
+                                        <connections>
+                                            <action selector="okButton:" destination="f0b-99-mnk" eventType="touchUpInside" id="fi0-QM-heh"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ANX-qf-7hP">
+                                        <rect key="frame" x="8" y="8" width="358" height="470"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dayTypeCell" id="pak-e7-VF1">
+                                                <rect key="frame" x="0.0" y="28" width="358" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pak-e7-VF1" id="5p0-ry-EOb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="f0b-99-mnk" id="Qdj-Fq-14F"/>
+                                            <outlet property="delegate" destination="f0b-99-mnk" id="qOf-Hb-Oqd"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-XF-POo" userLabel="Cancel">
+                                        <rect key="frame" x="189" y="486" width="177" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hAC-ET-eqc"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="f0b-99-mnk" eventType="touchUpInside" id="TB0-K8-cLY"/>
+                                            <action selector="okButton:" destination="f0b-99-mnk" eventType="touchUpInside" id="MPJ-To-atQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82866277833149804" green="1" blue="0.94351697955624658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ANX-qf-7hP" firstAttribute="leading" secondItem="nKJ-Nk-a4G" secondAttribute="leading" constant="8" id="4mL-Y1-tL2"/>
+                                    <constraint firstItem="ANX-qf-7hP" firstAttribute="top" secondItem="nKJ-Nk-a4G" secondAttribute="top" constant="8" id="6su-3j-OQc"/>
+                                    <constraint firstItem="GfQ-XF-POo" firstAttribute="trailing" secondItem="ANX-qf-7hP" secondAttribute="trailing" id="9Vv-EQ-bQl"/>
+                                    <constraint firstItem="OIb-DW-qrd" firstAttribute="leading" secondItem="nKJ-Nk-a4G" secondAttribute="leading" constant="10" id="EeY-Yn-p9L"/>
+                                    <constraint firstItem="GfQ-XF-POo" firstAttribute="top" secondItem="ANX-qf-7hP" secondAttribute="bottom" constant="8" id="JgD-e0-9as"/>
+                                    <constraint firstItem="OIb-DW-qrd" firstAttribute="height" secondItem="GfQ-XF-POo" secondAttribute="height" id="Yfj-X9-297"/>
+                                    <constraint firstAttribute="bottom" secondItem="OIb-DW-qrd" secondAttribute="bottom" constant="8" id="ddB-dZ-IfQ"/>
+                                    <constraint firstItem="OIb-DW-qrd" firstAttribute="width" secondItem="GfQ-XF-POo" secondAttribute="width" id="nB6-ok-7T0"/>
+                                    <constraint firstItem="OIb-DW-qrd" firstAttribute="top" secondItem="ANX-qf-7hP" secondAttribute="bottom" constant="8" id="r8H-ZG-86Y"/>
+                                    <constraint firstItem="GfQ-XF-POo" firstAttribute="leading" secondItem="OIb-DW-qrd" secondAttribute="trailing" constant="2" id="vq9-qs-dSx"/>
+                                    <constraint firstAttribute="trailing" secondItem="ANX-qf-7hP" secondAttribute="trailing" constant="8" id="zVC-n0-uam"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nKJ-Nk-a4G" firstAttribute="top" secondItem="6U2-vO-brB" secondAttribute="top" constant="112" id="0KJ-lH-Dtl"/>
+                            <constraint firstItem="nKJ-Nk-a4G" firstAttribute="trailing" secondItem="T2L-eL-jt2" secondAttribute="trailingMargin" id="TOM-25-p1q"/>
+                            <constraint firstItem="6U2-vO-brB" firstAttribute="bottom" secondItem="nKJ-Nk-a4G" secondAttribute="bottom" constant="182" id="Yzc-3K-YE0"/>
+                            <constraint firstItem="nKJ-Nk-a4G" firstAttribute="leading" secondItem="T2L-eL-jt2" secondAttribute="leadingMargin" id="xXd-F8-TnJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6U2-vO-brB"/>
+                    </view>
+                    <connections>
+                        <outlet property="daysTypeTable" destination="ANX-qf-7hP" id="63b-dr-mKZ"/>
+                        <outlet property="popupView" destination="nKJ-Nk-a4G" id="MVG-iE-mgV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlx-gY-8gF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-29436.231884057972" y="1708.9285714285713"/>
         </scene>
         <!--Add new employee-->
         <scene sceneID="ATw-bf-DOa">

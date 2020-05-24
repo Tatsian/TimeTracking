@@ -35,9 +35,9 @@ class EmployeesViewController: UIViewController {
             as? AddEmployeeViewController
     }
     
-    static func storyboardInstanceTime() -> TimeStampViewController? {
+    static func storyboardInstanceTime() -> CalendarViewController? {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "TimeStampVC") as? TimeStampViewController
+        return storyboard.instantiateViewController(withIdentifier: "TimeStampVC") as? CalendarViewController
     }
     
       }

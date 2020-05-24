@@ -54,16 +54,6 @@ class CoreDataManager {
         }
     }
     
-//    func save(department: String, oldValue: Departments? = nil ) {
-//        let newDepartment = oldValue ?? Departments(context: context)
-//        newDepartment.name = department
-//        do {
-//            try context.save()
-//        } catch let error {
-//            print("Could not save because of error: \(error)")
-//        }
-//    }
-    
     func newEmployee() -> Employees {
         return Employees(context: context)
     }
@@ -72,7 +62,6 @@ class CoreDataManager {
     }
     
     func save() {
-
         do {
             try context.save()
         } catch let error {

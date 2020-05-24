@@ -13,7 +13,7 @@ class DepartmentViewController: UIViewController {
 
     @IBOutlet weak var departmentTable: UITableView!
     
-    var departmentArray = [Departments]()
+    var departmentArray = CoreDataManager.shared.getDepartmentsList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,6 @@ class DepartmentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        departmentArray = CoreDataManager.shared.getDepartmentsList()
         departmentTable.reloadData()
     }
     
@@ -61,6 +60,7 @@ extension DepartmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         if departmentArray.count > indexPath.row {
+//            UIAlertController.showAlert(message: "All employees will be delete too", from: self) 
             let department = departmentArray[indexPath.row]
             departmentArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)

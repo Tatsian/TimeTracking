@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Departments" representedClassName="Departments" syncable="YES">
         <attribute name="name" attributeType="String"/>
-        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employees" inverseName="department" inverseEntity="Employees"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Employees" inverseName="department" inverseEntity="Employees"/>
     </entity>
     <entity name="Employees" representedClassName="Employees" syncable="YES">
         <attribute name="firstName" attributeType="String"/>
@@ -25,9 +25,9 @@
         <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employees" inverseName="workTime" inverseEntity="Employees"/>
     </entity>
     <elements>
-        <element name="Departments" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Employees" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="TypeOfDays" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="WorkTime" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Departments" positionX="0" positionY="0" width="128" height="73"/>
+        <element name="Employees" positionX="0" positionY="0" width="128" height="133"/>
+        <element name="TypeOfDays" positionX="0" positionY="0" width="128" height="88"/>
+        <element name="WorkTime" positionX="0" positionY="0" width="128" height="118"/>
     </elements>
 </model>

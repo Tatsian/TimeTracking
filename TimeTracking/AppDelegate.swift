@@ -14,62 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let appDel = UIApplication.shared.delegate as! AppDelegate
-        let context = appDel.persistentContainer.viewContext
-//
-
-        
-        if CoreDataManager.shared.getEmployeesList().count == 0 {
-            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Employees", in: context) else {
-                return true
-            }
-            let managedObject = Employees(entity: entityDescription, insertInto: context)
-            managedObject.firstName = "Tatsiana"
-            managedObject.lastName = "Pasiukova"
-            managedObject.position = "iOS developer"
-            managedObject.salary = 100
-        }
-        
-        if CoreDataManager.shared.getDepartmentsList().count == 0 {
-            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Departments", in: context) else {
-                return true
-            }
-            let managedObject = Departments(entity: entityDescription, insertInto: context)
-            
-            managedObject.name = "Developer"
-        }
-        
-        if CoreDataManager.shared.getTypeOfDays().count == 0 {
-            guard let entityDescription = NSEntityDescription.entity(forEntityName: "TypeOfDays", in: context) else {
-                return true
-            }
-            let managedObject = TypeOfDays(entity: entityDescription, insertInto: context)
-            managedObject.type = "Б"
-            managedObject.typeFullName = "Дни временной нетрудоспособности"
-        }
-
-//        managedObject.firstName = "Sergey"
-//        managedObject.lastName = "Petrov"
-//        managedObject.position = "Python and Go developer"
-//        managedObject.salary = 100.00
-//        managedObject.department?.name = "Developer"
-
-         self.saveContext()
-
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Departments")
-        do {
-            let results = try context.fetch(fetchRequest)
-            for result in results as! [Departments] {
-
-//                                if result.firstName == nil {
-//                                    context.delete(result)
-//                                    self.saveContext()
-//                                }
-
-                print("type - \(result.name)")
-            }
-        } catch {
-            print(error)
+ 
+        if !UserDefaults.standard.bool(forKey: "ExecuteOnce") {
+            CoreDataDefaultValue.addDefaultValues()
+            UserDefaults.standard.set(true, forKey: "ExecuteOnce")
         }
         return true
     }

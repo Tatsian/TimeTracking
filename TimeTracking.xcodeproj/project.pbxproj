@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB22479CA4400CEA882 /* VC.swift */; };
 		5B2F0DB52479D39700CEA882 /* CoreDataDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */; };
+		5B2F0DB92479FF3400CEA882 /* PopOverTimeStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB82479FF3400CEA882 /* PopOverTimeStampViewController.swift */; };
 		5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */; };
 		5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */; };
 		5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB83247405A600DA1D34 /* ViewController.swift */; };
@@ -30,8 +31,7 @@
 		5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */; };
 		5B7AFBBA2475A94E00DA1D34 /* AddDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */; };
 		5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */; };
-		5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */; };
-		5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD1B772476CA5400AEBB45 /* Struct.swift */; };
+		5BAEA19724773FE6007E2B26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAEA19624773FE6007E2B26 /* CalendarViewController.swift */; };
 		C4BAF402E2440833EB68BBFA /* Pods_TimeTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDCDE7601ECF926D34A6D35 /* Pods_TimeTracking.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		0CCBC36871C9E9954F17A60E /* Pods-TimeTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracking.debug.xcconfig"; path = "Target Support Files/Pods-TimeTracking/Pods-TimeTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2F0DB22479CA4400CEA882 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDefaultValue.swift; sourceTree = "<group>"; };
+		5B2F0DB82479FF3400CEA882 /* PopOverTimeStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverTimeStampViewController.swift; sourceTree = "<group>"; };
 		5B7AFB7C247405A600DA1D34 /* TimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,13 +59,12 @@
 		5B7AFBA52474972000DA1D34 /* WorkTime+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkTime+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B7AFBA62474972000DA1D34 /* Departments+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Departments+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5B7AFBA72474972000DA1D34 /* Departments+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Departments+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = MainVC/Administrator/CoreDataManager.swift; sourceTree = "<group>"; };
+		5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5B7AFBB524758F6A00DA1D34 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		5B7AFBB72475960300DA1D34 /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 		5B7AFBB92475A94E00DA1D34 /* AddDepartmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepartmentViewController.swift; sourceTree = "<group>"; };
 		5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStampViewController.swift; sourceTree = "<group>"; };
-		5BDD1B772476CA5400AEBB45 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		5BAEA19624773FE6007E2B26 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FCDCDE7601ECF926D34A6D35 /* Pods_TimeTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +92,16 @@
 		5B1FF67C2476B5AC003CA16D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */,
+				5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */,
+				5B2F0DB62479F92700CEA882 /* SystemFiles */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5B2F0DB62479F92700CEA882 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
 				5B7AFBA02474972000DA1D34 /* TypeOfDays+CoreDataClass.swift */,
 				5B7AFBA12474972000DA1D34 /* TypeOfDays+CoreDataProperties.swift */,
 				5B7AFBA22474972000DA1D34 /* Employees+CoreDataClass.swift */,
@@ -101,7 +111,7 @@
 				5B7AFBA62474972000DA1D34 /* Departments+CoreDataClass.swift */,
 				5B7AFBA72474972000DA1D34 /* Departments+CoreDataProperties.swift */,
 			);
-			path = CoreData;
+			path = SystemFiles;
 			sourceTree = "<group>";
 		};
 		5B7AFB73247405A600DA1D34 = {
@@ -125,12 +135,9 @@
 		5B7AFB7E247405A600DA1D34 /* TimeTracking */ = {
 			isa = PBXGroup;
 			children = (
-				5B1FF67C2476B5AC003CA16D /* CoreData */,
 				5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */,
 				5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */,
-				5B7AFBB024749C3300DA1D34 /* CoreDataManager.swift */,
-				5BDD1B772476CA5400AEBB45 /* Struct.swift */,
-				5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */,
+				5B1FF67C2476B5AC003CA16D /* CoreData */,
 				5B7AFBB224756A5800DA1D34 /* Extensions */,
 				5B7AFB992474061900DA1D34 /* MainVC */,
 				5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */,
@@ -163,7 +170,8 @@
 		5B7AFB98247405F700DA1D34 /* Timekeeper */ = {
 			isa = PBXGroup;
 			children = (
-				5BAEA19624773FE6007E2B26 /* TimeStampViewController.swift */,
+				5BAEA19624773FE6007E2B26 /* CalendarViewController.swift */,
+				5B2F0DB82479FF3400CEA882 /* PopOverTimeStampViewController.swift */,
 			);
 			path = Timekeeper;
 			sourceTree = "<group>";
@@ -326,12 +334,12 @@
 				5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */,
 				5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */,
 				5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */,
-				5BAEA19724773FE6007E2B26 /* TimeStampViewController.swift in Sources */,
+				5BAEA19724773FE6007E2B26 /* CalendarViewController.swift in Sources */,
+				5B2F0DB92479FF3400CEA882 /* PopOverTimeStampViewController.swift in Sources */,
 				5B2F0DB52479D39700CEA882 /* CoreDataDefaultValue.swift in Sources */,
 				5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */,
 				5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */,
 				5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */,
-				5BDD1B782476CA5400AEBB45 /* Struct.swift in Sources */,
 				5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
