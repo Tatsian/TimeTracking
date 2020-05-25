@@ -16,37 +16,34 @@ class CalendarViewController: UIViewController {
     
     var employee: Employees?
     var daysTypeArray = CoreDataManager.shared.getTypeOfDays()
-    var daysTypeTable = UITableView()
+
     var selectedDate = Date()
-    var workTimeArray = CoreDataManager.shared.getWorkTime()
-    var workTimeMark: WorkTime?
+    var workTimeArray = [WorkTime]()
+  
     var selectedType: TypeOfDays?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
-                                                           target: self,
-                                                           action: #selector(cancelTapped))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                             target: self,
                                                             action: #selector(saveTapped))
         guard let employee = employee else {
             return
         }
+        workTimeArray =  CoreDataManager.shared.getWorkTime().filter{ $0.employee == employee }
         employeeNameLabel.text = employee.lastName + " " + employee.firstName
-    }
-    
-    @objc func cancelTapped() {
-        dismiss(animated: true, completion: nil)
+        calendarView.reloadData()
     }
  
     @objc func saveTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
     func showTableAlert(title: String) {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: 250, height: 300)
+        let daysTypeTable = UITableView()
         daysTypeTable.frame = CGRect(x: 10, y: 0, width: vc.view.frame.width - 35, height: vc.view.frame.height)
         daysTypeTable.layer.cornerRadius = 10
         daysTypeTable.delegate = self
@@ -67,21 +64,28 @@ class CalendarViewController: UIViewController {
     }
     
     func doneTapped() {
+        
         guard let selectedType = selectedType else {
             UIAlertController.showAlert(message: "Please choose a type of day", from: self)
             return
         }
         
-        if workTimeMark == nil {
-            workTimeMark = CoreDataManager.shared.newWorkTimeMark()
-        }
-        workTimeMark?.employee = employee
-        workTimeMark?.startDate = selectedDate
-        workTimeMark?.endDate = selectedDate
-        workTimeMark?.type = selectedType.type
-        workTimeMark?.daysType = selectedType
+        let workTimeMark: WorkTime
         
-        workTimeArray = CoreDataManager.shared.getWorkTime()
+        if let currentWorkTime = workTimeArray.first(where: { $0.startDate == selectedDate }) {
+            workTimeMark = currentWorkTime
+        } else {
+            workTimeMark = CoreDataManager.shared.newWorkTimeMark()
+            workTimeArray.append(workTimeMark)
+        }
+        
+        
+        workTimeMark.employee = employee
+        workTimeMark.startDate = selectedDate
+        workTimeMark.endDate = selectedDate
+        workTimeMark.type = selectedType.type
+        workTimeMark.daysType = selectedType
+        
         CoreDataManager.shared.save()
         calendarView.reloadData()
     }
@@ -89,24 +93,21 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: FSCalendarDelegate {
     
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE MM-dd-yyyy"
         let string = formatter.string(from: date)
         selectedDate = date
         showTableAlert(title: string)
-        
-//        calendar
-        print("\(string)")
+        return false
     }
     
     func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         cell.eventIndicator.isHidden = false
         cell.eventIndicator.color = UIColor.green
-        
-        let workTimeForEmployee = workTimeArray.filter{ $0.employee == employee }
-        let dates = Set(workTimeForEmployee.map{ $0.startDate })
+   
+        let dates = workTimeArray.map{ $0.startDate }
         
         if dates.contains(date) {
             cell.eventIndicator.numberOfEvents = 1
@@ -120,7 +121,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = daysTypeTable.dequeueReusableCell(withIdentifier: "dayTypeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dayTypeCell", for: indexPath)
         let type = daysTypeArray[indexPath.row]
         cell.textLabel?.text = type.typeFullName
         return cell
@@ -128,5 +129,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedType = daysTypeArray[indexPath.row]
+        let rowToSelect:NSIndexPath = NSIndexPath(row: 0, section: 0)  //slecting 0th row with 0th section
+        tableView.selectRow(at: rowToSelect as IndexPath, animated: true, scrollPosition: .none)
     }
 }
