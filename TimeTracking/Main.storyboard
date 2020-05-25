@@ -175,7 +175,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mark of working time" id="boA-VW-sDU"/>
                     <connections>
-                        <outlet property="calendar" destination="buR-IA-yuy" id="ncC-uY-PyL"/>
+                        <outlet property="calendarView" destination="buR-IA-yuy" id="ncC-uY-PyL"/>
                         <outlet property="employeeNameLabel" destination="UBP-0s-xir" id="6q6-Rp-0WE"/>
                     </connections>
                 </viewController>

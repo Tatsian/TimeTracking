@@ -54,13 +54,25 @@ class CoreDataManager {
         }
     }
     
+    func getWorkTime() -> [WorkTime] {
+        let fetchRequest = WorkTime.fetchRequest() as NSFetchRequest<WorkTime>
+        do {
+           return try context.fetch(fetchRequest)
+        } catch let error {
+            print("Could not fetch because of error: \(error)")
+            return []
+        }
+    }
+    
     func newEmployee() -> Employees {
         return Employees(context: context)
     }
     func newDepartment() -> Departments {
         return Departments(context: context)
     }
-    
+    func newWorkTimeMark() -> WorkTime {
+        return WorkTime(context: context)
+    }
     func save() {
         do {
             try context.save()

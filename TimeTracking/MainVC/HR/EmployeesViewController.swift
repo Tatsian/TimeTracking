@@ -72,8 +72,7 @@ class EmployeesViewController: UIViewController {
                 guard let openedVC = EmployeesViewController.storyboardInstanceTime() else {
                     return
                 }
-                let persons = employeesArray[indexPath.row]
-                openedVC.employeeName = persons.lastName + " " + persons.firstName
+                openedVC.employee = employeesArray[indexPath.row]
                 let navigationController = UINavigationController(rootViewController: openedVC)
                 navigationController.modalPresentationStyle = .fullScreen
                 self.present(navigationController, animated: true, completion: nil)

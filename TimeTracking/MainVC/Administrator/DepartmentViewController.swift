@@ -13,7 +13,7 @@ class DepartmentViewController: UIViewController {
 
     @IBOutlet weak var departmentTable: UITableView!
     
-    var departmentArray = CoreDataManager.shared.getDepartmentsList()
+    var departmentArray = [Departments]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class DepartmentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        departmentArray = CoreDataManager.shared.getDepartmentsList()
         departmentTable.reloadData()
     }
     
