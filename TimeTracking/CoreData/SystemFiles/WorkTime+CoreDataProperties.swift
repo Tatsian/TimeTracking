@@ -18,7 +18,6 @@ extension WorkTime {
     }
 
     @NSManaged public var startDate: Date
-    @NSManaged public var endDate: Date
     @NSManaged public var type: String
     @NSManaged public var employee: Employees?
     @NSManaged public var daysType: TypeOfDays?

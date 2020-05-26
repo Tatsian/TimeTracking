@@ -11,7 +11,7 @@ import UIKit
 extension UIAlertController {
     
     static func showAlert(message: String, from controller: UIViewController) {
-        let alert = UIAlertController(title: "Error!",
+        let alert = UIAlertController(title: "Warning",
                                       message: message,
                                       preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok",

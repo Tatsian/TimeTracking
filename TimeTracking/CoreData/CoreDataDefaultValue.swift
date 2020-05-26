@@ -30,12 +30,6 @@ class CoreDataDefaultValue {
         employee.salary = 100
         employee.department = depArray.last
         
-        let employee2 = Employees(context: context)
-        employee2.firstName = "Petrov"
-        employee2.lastName = "Sergey"
-        employee2.position = "Python developer"
-        employee2.salary = 1000
-        
         let dayType = TypeOfDays(context: context)
         dayType.type = "Б"
         dayType.typeFullName = "Дни временной нетрудоспособности"
@@ -52,6 +46,17 @@ class CoreDataDefaultValue {
         dayType4.type = "У"
         dayType4.typeFullName = "Отпуск на период обучения"
         
+        let dayType5 = TypeOfDays(context: context)
+        dayType5.type = "До"
+        dayType5.typeFullName = "Неоплачиваемый отпуск "
+        
+        let dayType6 = TypeOfDays(context: context)
+        dayType6.type = "ОТ"
+        dayType6.typeFullName = "Ежегодный основной оплаченный отпуск"
+        
+        let dayType7 = TypeOfDays(context: context)
+        dayType7.type = "К"
+        dayType7.typeFullName = "Командировочные дни"
         CoreDataManager.shared.save()
     }
 }

@@ -18,7 +18,6 @@
         <relationship name="absence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkTime" inverseName="daysType" inverseEntity="WorkTime"/>
     </entity>
     <entity name="WorkTime" representedClassName="WorkTime" syncable="YES">
-        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="type" attributeType="String"/>
         <relationship name="daysType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeOfDays" inverseName="absence" inverseEntity="TypeOfDays"/>
@@ -28,6 +27,6 @@
         <element name="Departments" positionX="0" positionY="0" width="128" height="73"/>
         <element name="Employees" positionX="0" positionY="0" width="128" height="133"/>
         <element name="TypeOfDays" positionX="0" positionY="0" width="128" height="88"/>
-        <element name="WorkTime" positionX="0" positionY="0" width="128" height="118"/>
+        <element name="WorkTime" positionX="0" positionY="0" width="128" height="103"/>
     </elements>
 </model>

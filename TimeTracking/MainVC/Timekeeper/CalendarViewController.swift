@@ -27,7 +27,7 @@ class CalendarViewController: UIViewController {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                             target: self,
-                                                            action: #selector(saveTapped))
+                                                            action: #selector(done))
         guard let employee = employee else {
             return
         }
@@ -36,7 +36,7 @@ class CalendarViewController: UIViewController {
         calendarView.reloadData()
     }
  
-    @objc func saveTapped() {
+    @objc func done() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -66,7 +66,7 @@ class CalendarViewController: UIViewController {
     func doneTapped() {
         
         guard let selectedType = selectedType else {
-            UIAlertController.showAlert(message: "Please choose a type of day", from: self)
+            UIAlertController.showAlert(message: "Type of day was not selected", from: self)
             return
         }
         
@@ -79,10 +79,8 @@ class CalendarViewController: UIViewController {
             workTimeArray.append(workTimeMark)
         }
         
-        
         workTimeMark.employee = employee
         workTimeMark.startDate = selectedDate
-        workTimeMark.endDate = selectedDate
         workTimeMark.type = selectedType.type
         workTimeMark.daysType = selectedType
         
@@ -129,7 +127,13 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedType = daysTypeArray[indexPath.row]
-        let rowToSelect:NSIndexPath = NSIndexPath(row: 0, section: 0)  //slecting 0th row with 0th section
-        tableView.selectRow(at: rowToSelect as IndexPath, animated: true, scrollPosition: .none)
+    }
+    
+     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let setType = workTimeArray.first(where: { $0.startDate == selectedDate })
+        
+        if setType?.daysType == daysTypeArray[indexPath.row] {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
     }
 }
