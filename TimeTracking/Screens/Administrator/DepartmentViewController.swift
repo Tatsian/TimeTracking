@@ -61,11 +61,17 @@ extension DepartmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         if departmentArray.count > indexPath.row {
-//            UIAlertController.showAlert(message: "All employees will be delete too", from: self) 
-            let department = departmentArray[indexPath.row]
-            departmentArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            CoreDataManager.shared.delete(department: department)
+            let alert = UIAlertController(title: "Warning",
+                                          message: "All employees of this department will also be deleted",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                let department = self.departmentArray[indexPath.row]
+                self.departmentArray.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                CoreDataManager.shared.delete(department: department)
+            }))
+            present(alert, animated: true, completion: nil)
         }
     }
 }

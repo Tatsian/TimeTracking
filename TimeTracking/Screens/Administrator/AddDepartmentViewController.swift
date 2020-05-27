@@ -38,7 +38,7 @@ class AddDepartmentViewController: UIViewController {
     @objc func saveTapped() {
         let name = departmentNameTextField.text ?? ""
         if name.isEmpty {
-            setRedPlaceholder(for: departmentNameTextField)
+            departmentNameTextField.setRedPlaceholder()
             UIAlertController.showAlert(message: "Missing required field", from: self)
         } else if checkingTheSame(name: name) {
             UIAlertController.showAlert(message: "A department with that name already exists", from: self)
@@ -47,7 +47,7 @@ class AddDepartmentViewController: UIViewController {
             if department == nil {
                 department = CoreDataManager.shared.newDepartment()
             }
-            department?.name = name.capitalized
+            department?.name = name
             CoreDataManager.shared.save()
             dismiss(animated: true, completion: nil)
         }
@@ -55,9 +55,9 @@ class AddDepartmentViewController: UIViewController {
     
     func checkingTheSame(name: String) -> Bool  {
         let departmentsArray = CoreDataManager.shared.getDepartmentsList()
-        let context = CoreDataManager.shared.context
-        for dep in departmentsArray {
-            if dep.name == name && context.hasChanges {
+        let filter = departmentsArray.filter { $0 != department }
+        for dep in filter {
+            if dep.name == name {
                 return true
             }
         }

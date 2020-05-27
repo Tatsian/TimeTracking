@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChooseRoleViewController.swift
 //  TimeTracking
 //
 //  Created by Tatsiana on 19.05.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChooseRoleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,4 @@ class ViewController: UIViewController {
         EmployeesViewController.isHRManager = false
     }
 }
-
-//        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "DepartmentVC") as UIViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        self.present(vc, animated: true, completion: nil)
-    
+ 

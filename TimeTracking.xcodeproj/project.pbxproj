@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB22479CA4400CEA882 /* VC.swift */; };
+		5B2F0DB32479CA4400CEA882 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB22479CA4400CEA882 /* UITextField.swift */; };
 		5B2F0DB52479D39700CEA882 /* CoreDataDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */; };
 		5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */; };
 		5B7AFB82247405A600DA1D34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */; };
-		5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB83247405A600DA1D34 /* ViewController.swift */; };
+		5B7AFB84247405A600DA1D34 /* ChooseRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB83247405A600DA1D34 /* ChooseRoleViewController.swift */; };
 		5B7AFB8A247405A600DA1D34 /* TimeTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AFB88247405A600DA1D34 /* TimeTracking.xcdatamodeld */; };
 		5B7AFB8C247405AD00DA1D34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */; };
 		5B7AFB8F247405AD00DA1D34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AFB8D247405AD00DA1D34 /* LaunchScreen.storyboard */; };
@@ -37,12 +37,12 @@
 /* Begin PBXFileReference section */
 		07EAF741A6D355CB1E092290 /* Pods-TimeTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracking.release.xcconfig"; path = "Target Support Files/Pods-TimeTracking/Pods-TimeTracking.release.xcconfig"; sourceTree = "<group>"; };
 		0CCBC36871C9E9954F17A60E /* Pods-TimeTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTracking.debug.xcconfig"; path = "Target Support Files/Pods-TimeTracking/Pods-TimeTracking.debug.xcconfig"; sourceTree = "<group>"; };
-		5B2F0DB22479CA4400CEA882 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		5B2F0DB22479CA4400CEA882 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		5B2F0DB42479D39700CEA882 /* CoreDataDefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDefaultValue.swift; sourceTree = "<group>"; };
 		5B7AFB7C247405A600DA1D34 /* TimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7AFB7F247405A600DA1D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B7AFB83247405A600DA1D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B7AFB83247405A600DA1D34 /* ChooseRoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRoleViewController.swift; sourceTree = "<group>"; };
 		5B7AFB89247405A600DA1D34 /* TimeTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeTracking.xcdatamodel; sourceTree = "<group>"; };
 		5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7AFB8E247405AD00DA1D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				5B7AFB81247405A600DA1D34 /* SceneDelegate.swift */,
 				5B1FF67C2476B5AC003CA16D /* CoreData */,
 				5B7AFBB224756A5800DA1D34 /* Extensions */,
-				5B7AFB992474061900DA1D34 /* MainVC */,
+				5B7AFB992474061900DA1D34 /* Screens */,
 				5B7AFB8B247405AD00DA1D34 /* Assets.xcassets */,
 				5B7AFB9A2474065400DA1D34 /* Main.storyboard */,
 				5B7AFB8D247405AD00DA1D34 /* LaunchScreen.storyboard */,
@@ -173,22 +173,22 @@
 			path = Timekeeper;
 			sourceTree = "<group>";
 		};
-		5B7AFB992474061900DA1D34 /* MainVC */ = {
+		5B7AFB992474061900DA1D34 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5B7AFB83247405A600DA1D34 /* ViewController.swift */,
+				5B7AFB83247405A600DA1D34 /* ChooseRoleViewController.swift */,
 				5B7AFB96247405D500DA1D34 /* Administrator */,
 				5B7AFB97247405ED00DA1D34 /* HR */,
 				5B7AFB98247405F700DA1D34 /* Timekeeper */,
 			);
-			path = MainVC;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		5B7AFBB224756A5800DA1D34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				5B7AFBBB2475CBAB00DA1D34 /* AlertController.swift */,
-				5B2F0DB22479CA4400CEA882 /* VC.swift */,
+				5B2F0DB22479CA4400CEA882 /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 				5B7AFBBA2475A94E00DA1D34 /* AddDepartmentViewController.swift in Sources */,
 				5B7AFBAA2474972000DA1D34 /* Employees+CoreDataClass.swift in Sources */,
 				5B7AFB9D2474085E00DA1D34 /* DepartmentViewController.swift in Sources */,
-				5B7AFB84247405A600DA1D34 /* ViewController.swift in Sources */,
+				5B7AFB84247405A600DA1D34 /* ChooseRoleViewController.swift in Sources */,
 				5B7AFBBC2475CBAB00DA1D34 /* AlertController.swift in Sources */,
 				5B7AFB80247405A600DA1D34 /* AppDelegate.swift in Sources */,
 				5B7AFBB82475960300DA1D34 /* AddEmployeeViewController.swift in Sources */,
@@ -336,7 +336,7 @@
 				5B7AFBAD2474972000DA1D34 /* WorkTime+CoreDataProperties.swift in Sources */,
 				5B7AFBB624758F6A00DA1D34 /* EmployeesViewController.swift in Sources */,
 				5B7AFBAE2474972000DA1D34 /* Departments+CoreDataClass.swift in Sources */,
-				5B2F0DB32479CA4400CEA882 /* VC.swift in Sources */,
+				5B2F0DB32479CA4400CEA882 /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

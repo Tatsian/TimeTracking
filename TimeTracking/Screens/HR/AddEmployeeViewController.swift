@@ -54,24 +54,24 @@ class AddEmployeeViewController: UIViewController {
         
         guard let salary = Decimal(string: salaryTextField.text ?? "") else {
             UIAlertController.showAlert(message: "You can use 0-9 to set the salary value", from: self)
-            setRedPlaceholder(for: firstNameTextField)
-            setRedPlaceholder(for: lastNameTextField)
-            setRedPlaceholder(for: positionTextField)
-            setRedPlaceholder(for: salaryTextField)
+            firstNameTextField.setRedPlaceholder()
+            lastNameTextField.setRedPlaceholder()
+            positionTextField.setRedPlaceholder()
+            salaryTextField.setRedPlaceholder()
             return
         }
         
         if name.isEmpty || lastName.isEmpty || position.isEmpty {
-            setRedPlaceholder(for: firstNameTextField)
-            setRedPlaceholder(for: lastNameTextField)
-            setRedPlaceholder(for: positionTextField)
+            firstNameTextField.setRedPlaceholder()
+            lastNameTextField.setRedPlaceholder()
+            positionTextField.setRedPlaceholder()
             UIAlertController.showAlert(message: "Missing required field(s)", from: self)
         } else {
             if employee == nil {
                 employee = CoreDataManager.shared.newEmployee()
             }
-            employee?.firstName = name.capitalized
-            employee?.lastName = lastName.capitalized
+            employee?.firstName = name
+            employee?.lastName = lastName
             employee?.position = position
             employee?.salary = NSDecimalNumber(decimal: salary)
             employee?.department = department
